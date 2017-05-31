@@ -1,7 +1,7 @@
 # logAnalyser
 To run this script need following modules
-</br>always-tail
-</br>nodemailer
+</br>always-tail(npm install always-tail)
+</br>nodemailer(npm install nodemailer)
 
 Please replace your mail id at fromEmailId and replace password at pass with your password at transporter section
 
