@@ -82,7 +82,7 @@ var processNginxLogData = function (data, emailIds) {
 var processCatalinaLogData = function (data, emailIds) {
     var dataPrefix = '2';
     if (data.includes(" ERROR ") || data.includes(" FATAL ")) {
-        sendMail(emailIds, "Error occured in LMS", dataPrefix + data);
+        sendMail(emailIds, "Error occured in Application", dataPrefix + data);
     }
 }
 
