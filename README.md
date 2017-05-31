@@ -1,7 +1,7 @@
 # logAnalyser
 To run this script need following modules
-always-tail
-nodemailer
+</br>always-tail
+</br>nodemailer
 
 Please replace your mail id at fromEmailId and replace password at pass with your password at transporter section
 
