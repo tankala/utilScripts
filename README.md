@@ -1,4 +1,8 @@
 # logAnalyser
+This script bascially tails your log files which you mentioned in the script.
+If it find any log entry in nginx log which didn't get http code in response 200 then it will shoot a mail
+If it find any error or fatal log entry in catalina log then also it will shoot a mail
+
 To run this script need following modules
 </br>always-tail(npm install always-tail)
 </br>nodemailer(npm install nodemailer)
