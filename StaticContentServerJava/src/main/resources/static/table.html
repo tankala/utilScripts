@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function onLoad() {
+            var url = 'jsonData.json';
+            $.getJSON(url, function (json) {
+                var table = $('<table>');
+                table.attr('border', '1');
+                var tr = $('<tr>');
+                var td = $('<td>');
+                td.html("ID");
+                tr.append(td);
+                td = $('<td>');
+                td.html('Name');
+                tr.append(td);
+                td = $('<td>');
+                td.html('IDNumber');
+                tr.append(td);
+                table.append(tr);
+                for (var i = 0; i < json.length; i++) {
+                    var tr = $('<tr>');
+                    var td = $('<td>');
+                    td.html(json[i].ID);
+                    tr.append(td);
+                    td = $('<td>');
+                    td.html(json[i].Name);
+                    tr.append(td);
+                    td = $('<td>');
+                    td.html(json[i].IDNumber);
+                    tr.append(td);
+                    table.append(tr);
+                }
+                $('body').append(table);
+            });
+        }
+    </script>
+</head>
+
+<body onload="onLoad();">
+</body>
+
+</html>
