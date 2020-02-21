@@ -15,11 +15,11 @@ def init():
     where we stored last time when the application stopped.
     """
     global page_view_counter
-    counter_file = open(counter_file_name, "a+")
-    counter = counter_file.read()
-    if counter:
+    if os.path.exists(counter_file_name):
+        counter_file = open(counter_file_name, "r")
+        counter = counter_file.read()
         page_view_counter = int(counter)
-    counter_file.close()
+        counter_file.close()
 
 def on_stop(*args):
     """
